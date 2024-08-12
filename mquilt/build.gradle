@@ -16,6 +16,20 @@ loom {
 			sourceSet("main")
 		}
 	}
+
+	runs {
+		client {
+			client()
+			ideConfigGenerated = true
+			name = "Quilt Client"
+		}
+
+		server {
+			server(); serverWithGui()
+			ideConfigGenerated = true
+			name = "Quilt Server"
+		}
+	}
 }
 
 // All the dependencies are declared at gradle/libs.version.toml and referenced with "libs.<id>"
@@ -50,7 +64,7 @@ java {
 
 // If you plan to use a different file for the license, don't forget to change the file name here!
 jar {
-	from('LICENSE.md') {
+	from(rootProject.file('LICENSE.md')) {
 		rename { "${it}_${base.archivesName.get()}" }
 	}
 }

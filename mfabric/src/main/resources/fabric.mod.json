@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "mixins": "mod-issues.mixins.json",
+  "id": "mod-issues",
+  "version": "${version}",
+  "name": "Mod Issues",
+  "description": "An example for issues I'm experiencing",
+  "authors": [
+    "Quinn Semele"
+  ],
+  "icon": "assets/mod-issues/icon.png",
+  "license": "MIT",
+  "entrypoints": {
+    "main": "dev.compasses.mod_issues.ModIssues"
+  },
+  "depends": {
+    "fabric-loader": ">=0.15.11",
+    "fabric-api": ">=0.102.0"
+  }
+}
